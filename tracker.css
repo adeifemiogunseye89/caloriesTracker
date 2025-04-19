@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cardBackground:  #f05080a8;;
+    --border-radius: 7px;
+    --smallborder-radius: 3px;
+    --cardBorder: #ff457e;
+    --cardPadding: 10px auto;
+    --smallcardPadding: 10px;
+    --cardMargin: 15px auto;
+    --columnGap:0.5rem;
+    --rowGap:1.2rem;
+    --SmallrowGap:1rem;
+    --line-height:1.2rem;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container-wrap{
+    display: block;
+    margin: var(--cardMargin);
+    background: var(--cardBackground);
+    border-radius: var(--border-radius);
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.4);
+    ;
+}
+.head-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding: var( --cardPadding);
+    justify-content: end;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    border-radius: var(--border-radius); 
+    margin: var(--rowGap);
+}
+.head-container{
+    display: flex;
+    flex-direction: column;
+    margin: var( --columnGap);
+    border-radius: var(--border-radius);
+}
+.user-profile{
+    display: block;
+    text-align: end;
+    /* width: fit-content; */
+    color: black;
+    /* background-color: white; */
+    margin: var(--SmallrowGap);
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start; 
+    line-height: 2.2rem; 
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    background-color:blue;
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    /* border-radius: var(--border-radius); */
+    margin: var(--columnGap);
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 1s ease-in-out;
+
+}
+nav ul li a:hover{
+    color: blue;
+    background-color: white;
+    font-size: 150%;
+    /* transform: translate  1 ease-in-out; */
+}
+.page-container{
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.6);
+}
+.container-text{
+    background-color: snow;
+}
+.health-line{
+    display: block;
+    text-align: start;
+}
+.input-box{
+    border-radius: var(--smallborder-radius) ;
+    border: none;
+    padding: 5px auto;
+    text-align: center;
+}
+.input-box:focus{
+    border:1px solid rgba(128, 128, 128, 0.406);
+    width: 45%;
+    font-size: 18px;
+    margin: 2rem auto;
+    text-align: center;
+}
+.input-box:hover{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.health-line{
+    display: block;
+    text-align: center;
+    padding: 2.5rem;
+}
+.userData-container{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: lavender;
+    gap: 5px;
+    letter-spacing: 2px;
+    border-radius: var(--smallborder-radius);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+.userData-container:hover{
+    background-color: white;
+}
+.areobic-container{
+    display: block;
+    text-align: start;
+    line-height: 1.4rem;
+    letter-spacing: 2px;
+    background-color: lavender;
+    padding: var(--smallcardPadding);
+    border-radius: var(--smallborder-radius);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+.areobic-container:hover{
+    background-color: white;
+}
+.calorieBtn{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    color:black;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    padding: 5px auto;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+.calorieBtn:hover{
+    background-color: black;
+    color: whitesmoke ;
+    transition: 1ms ease-in-out;
+}
+.description{
+    font-size: 0.5rem;
+}
+.disclaimer-container{
+    display: block;
+    text-align: center;
+    background-color: red;
+    color: aliceblue;
+    border-radius: var(--smallborder-radius);
+    padding: 5px;
+    align-items: baseline;
+}
+.disclaimer{
+    font-size: 0.5rem;
+    margin-top: none;
+    margin-bottom:none;
+}
+.calendar-schedule-container{
+    display: flex;
+    gap: 5px;
+    background-color: rgb(130, 214, 248);
+    padding: 15px;
+}
+.calendar-container{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.calendar-controls {
+    margin-bottom: 1em;
+}
+
+.calendar-controls select,
+.calendar-controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 1em;
+}
+
+#calendar {
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the calendar */
+}
+
+#calendar th,
+#calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    min-width: 50px; /* Ensure cells have some width */
+    height: 50px;
+    vertical-align: top;
+}
+
+#calendar th {
+    background-color: #f2f2f2;
+}
+
+#calendar td {
+    cursor: pointer;
+    position: relative; /* Needed for potential future absolute positioning inside */
+}
+
+#calendar td.empty {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+#calendar td.clickable-day:hover {
+    background-color: #e0e0e0;
+}
+
+#calendar td.today {
+    background-color: #fffde7; /* Light yellow for today */
+    font-weight: bold;
+}
+
+#calendar td.selected {
+    background-color: #bbdefb; /* Light blue for selected */
+    font-weight: bold;
+    outline: 2px solid #2196F3; /* Blue outline */
+}
+
+
+/* Schedule Section */
+#schedule-section {
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px; /* Limit width */
+    text-align: center; /* Center heading */
+}
+
+#schedule-section h2 {
+    margin-top: 0;
+}
+
+.gym-time-line {
+    width: 100%; /* Make table fill container */
+    margin-top: 1em;
+    border-collapse: collapse; /* Ensure borders combine */
+}
+
+.gym-time-line th,
+.gym-time-line td {
+    padding: 8px;
+    text-align: left;
+}
+.gym-time-line td:last-child { /* Center checkbox */
+     text-align: center;
+}
+.gym-time-line input[type="checkbox"] {
+    width: 18px; /* Make checkbox slightly larger */
+    height: 18px;
+    cursor: pointer;
+}
+/* Utility Class */
+.hidden {
+    display: none;
+    }    
+footer{
+    background-color: slategrey;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+}

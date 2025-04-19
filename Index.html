@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natal CaloriesBurns</title>
+    <link rel="stylesheet" href="tracker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-wrap">
+        <div class="head-wrap">
+            <div class="head-container">
+                <h2>Natal Health</h2>
+                <span><i>....life counts</i></span>
+            </div>
+            <div class="user-profile">
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
+        </div> 
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#">Walking</a></li>
+                <li><a href="#">Runing</a></li>
+                <li><a href="#">Cycling</a></li>
+                <li><a href="#">Swimming</a></li>
+            </ul>
+        </nav>
+        <div class="page-container">
+            <div class="container-text">
+                <h2>Activity Calorie Estimator:METs</h2>
+                <h4>Recovery Tracker</h4>
+                <p>keeping tracks of burnt calories per/min</p>
+            </div>
+            <div class="health-line">
+                <div class="aerobic-userData">
+                  
+                        <div class="userData-container">
+
+                            <div>
+                                <label for="userName">User Name:</label>
+                                <input class="input-box" type="text" id="userName" placeholder="e.g Adebanjo" required>
+                            </div>
+
+                            <div>
+                                <label for="durationInput">Duration (Mins):</label>
+                                <input class="input-box" type="number" id="durationInput" placeholder="e.g., 30" min="0">
+                            </div>
+                        
+                            <div>
+                                <label for="weightInput">Weight(Kg):</label>
+                                <input class="input-box" type="number" id="weightInput" placeholder="e.g., 70" min="0">
+                            </div>
+                            <br>
+                            <div class="areobic-container">
+                                <div>
+                                  <label for="activity">Select Activity:</label><br>
+                                  <select id="activitySelect">
+                                    <option value="">Light-intensity</option>
+                                    <!-- Each 'value' attribute holds the MET value for the activity -->
+                                    <option value="1.3">Sitting at desk</option>
+                                    <option value="1.5">Sitting Play Cards</option>
+                                    <option value="1.8">standing at desk</option>
+                                    <option value="2.0">Strolling</option>
+                                    <option value="2.2">Washing Dishes</option>
+                                    <option value="2.5">Hatha Yoga</option>
+                                    <option value="2.5.0">Fishing sitting</option>
+                                    <option value="2.5">Light Housekeeping</option>
+                                    <!-- Add more activities and their MET values as needed -->
+                                  </select>
+                                  <br>
+                                  <select id="active">
+                                    <option value=""> Moderate Intensity --</option>
+                                    <!-- Each 'value' attribute holds the MET value for the activity -->
+                                    <option value="3.5">house cleaning</option>
+                                    <option value="3.5">Light-weight Training </option>
+                                    <option value="4.3">Pulling Clubs/Gulf</option>
+                                    <option value="5.0">Brisk Walking (4 mph)</option>
+                                    <option value="5.0">Weight-Training: heavy</option>
+                                    <option value="5.1">Mowing compound</option>
+                                    <option value="6.0">Swimming laps (Leisurely)</option>
+                                    <!-- Add more activities and their MET values as needed -->
+                                  </select>
+                                  <br>
+                        
+                                  <select id="activities">
+                                    <option value=""> Vigorous & Pace</option>
+                                    <!-- Each 'value' attribute holds the MET value for the activity -->
+                                    <option value="6.3">WalkingThread Briskly</option>
+                                    <option value="8.0">Cycling:flat terrain</option>
+                                    <option value="8.0">Circuit Training </option>
+                                    <option value="8.0">Single Tennis </option>
+                                    <option value="8.5">Shoveling and Digging </option>
+                                    <option value="8.0">Cycling (steep terrain, ~12-14 mph)</option>
+                                    <option value="10.0">Football</option>
+                                    <option value="11.5">Running </option>
+                                    <option value="12.3">Jumpping </option>
+                                    <!-- Add more activities and their MET values as needed -->
+                                  </select>
+                                </div>
+                                <div id="result">
+                                    estimated calories burnt:
+                                </div>
+                            </div> 
+                        </div>
+                        <div>
+                            <button class="calorieBtn" id="calculateButton">Calories</button>
+                        </div>
+                    <!-- <p class="walkingOut"></p> -->
+                   
+                </div>
+                <br>
+            </div>
+            <div class="disclaimer-container">
+                <span class="disclaimer">The number of calories (kcal) Per Minute varies significantly base on several factors, therefore, these are approximates estimates</span>
+            </div>
+        </div>
+        <div>
+            <h4>Gym Schedule Planner</h4>
+        </div>
+            
+        <div class="calendar-schedule-container">
+            <div class="calendar-container">
+                <div class="calendar-controls">
+                    <button id="prev-month">< Prev</button>
+                    <select id="month-select"></select>
+                    <select id="year-select"></select>
+                    <button id="next-month">Next ></button>
+                    <button id="today-button">Today</button>
+                </div>
+                <div id="calendar-container">
+                    <table id="calendar">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                            <!-- Calendar days will be generated here by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        <div id="schedule-section" class="hidden">
+            <h2>Schedule for <span id="selected-date-display"></span></h2>
+            <div id="schedule-table-container">
+                <!-- Schedule table will be inserted here -->
+            </div>
+            <p id="no-schedule-message" class="hidden">Click a date on the calendar to view or set its schedule.</p>
+            <p><em>Changes are saved here automatically.</em></p>
+        </div>
+
+        <!-- Template for the schedule table (will be cloned by JS) -->
+        <template id="schedule-table-template">
+            <div>
+                <table border="1" class="gym-time-line">
+                    <thead>
+                        <tr>
+                            <th>Period/Schedule</th>
+                            <th>schedule Booked</th> <!-- Changed header for clarity -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Morning 6am-9am</td>
+                            <td><input type="checkbox" data-timeslot="morning"></td>
+                        </tr>
+                        <tr>
+                            <td>Afternoon 12pm-3pm</td>
+                            <td><input type="checkbox" data-timeslot="noon"></td>
+                        </tr>
+                        <tr>
+                            <td>Evening 4pm-6pm</td>
+                            <td><input type="checkbox" data-timeslot="evening"></td>
+                        </tr>
+                        <tr>
+                            <td>Night 8pm-11pm</td>
+                            <td><input type="checkbox" data-timeslot="night"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </template>
+        </div>
+        
+
+
+        <!--<div class="gym-time-line">
+            <div class="calendar">
+                <p>Routine date and schedule </p> 
+            
+                
+
+            </div>
+
+
+
+            <Div>
+                <table border="1" class="gym-time-line">
+                    <thead>
+                        <tr>
+                            <th>period/schedule</th>
+                            <th>Sunday</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>mornin 6am-9am</td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                        <td><input type="checkbox" name="morning session" id="checkbox-morning"></td>
+                    </tr>
+                    <tr>
+                        <td>Afternoon 12pm-3pm</td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                        <td><input type="checkbox" name="Noon session" id="checkbox-noon"></td>
+                    </tr>
+                    <tr>
+                        <td>Evening 4pm-6pm</td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                        <td><input type="checkbox" name="Evening-session" id="checkbox-evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Night 8pm-11pm</td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                        <td><input type="checkbox" name="Night-session" id="checkbox-night"></td>
+                    </tr> 
+                </table>
+            </Div>
+        </div>-->
+        <footer>
+            <p>&copy; 2025: NatalHealth Center</p>
+        </footer>
+    </div>
+    <script src="tracker.js"></script>
+</body>
+</html>
